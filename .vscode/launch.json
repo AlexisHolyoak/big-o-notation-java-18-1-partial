@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Exponential",
+            "request": "launch",
+            "mainClass": "pe.edu.unmsm.fisi.upg.ads.big_o_notation_java.Exponential",
+            "projectName": "big-o-notation-java-partial"
+        }
+    ]
+}

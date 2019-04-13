@@ -8,17 +8,21 @@ import com.google.common.base.Stopwatch;
 public class Exponential {
 
 	public static void main(String[] args) {
-		long N = 45;
+		long N = 80;
 		Exponential exponential = new Exponential();
 		Stopwatch stopwatch = Stopwatch.createStarted();
 		for (int i = 1; i <= N; i++) {
+			long fibonacci = exponential.fibonacci_best(i);
+			System.out.println(i+"=>"+fibonacci);
+			/*
 			try {
 				long fibonacci = exponential.fibonacci(i);
 				System.out.println(i + " => " + fibonacci);
 			} catch (Exception e) {
 				e.printStackTrace();
-			}
-        }
+			}*/
+		}
+		System.out.println();
 		System.out.println(String.format("Time elapsed: %d seconds", stopwatch.elapsed(TimeUnit.SECONDS)) + "\n");
 	}
 	
@@ -30,5 +34,15 @@ public class Exponential {
             return 1;
         }
         return fibonacci(n - 1) + fibonacci(n - 2);
-    }
+	}
+	/*version mejorada */
+	public long fibonacci_best(int n) {
+		int a=0; int b=1; int c;
+		for (int i=0;i<n;i++){
+			c=a+b;
+			a=b;
+			b=c;
+		}
+		return a;
+	}
 }
