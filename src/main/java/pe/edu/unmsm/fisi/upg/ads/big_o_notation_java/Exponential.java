@@ -11,9 +11,10 @@ public class Exponential {
 		long N = 80;
 		Exponential exponential = new Exponential();
 		Stopwatch stopwatch = Stopwatch.createStarted();
-		for (int i = 1; i <= N; i++) {
+		
+		for (int i = 0; i <= N; i++) {
 			long fibonacci = exponential.fibonacci_best(i);
-			System.out.println(i+"=>"+fibonacci);
+		System.out.println(i+"=>"+fibonacci);
 			/*
 			try {
 				long fibonacci = exponential.fibonacci(i);
@@ -36,8 +37,9 @@ public class Exponential {
         return fibonacci(n - 1) + fibonacci(n - 2);
 	}
 	/*version mejorada */
-	public long fibonacci_best(int n) {
-		int a=0; int b=1; int c;
+	public long fibonacci_best(long n) {
+		
+		long a=0; long b=1; long c;
 		for (int i=0;i<n;i++){
 			c=a+b;
 			a=b;
